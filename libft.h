@@ -6,7 +6,7 @@
 /*   By: ebulwer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 17:41:58 by ebulwer           #+#    #+#             */
-/*   Updated: 2019/09/25 14:05:27 by ebulwer          ###   ########.fr       */
+/*   Updated: 2020/03/02 17:07:59 by ebulwer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ char				*ft_strrev(char *str);
 int					ft_isspace(char c);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
+int					get_next_line(const int fd, char **line);
 
 #endif

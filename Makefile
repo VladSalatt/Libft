@@ -6,7 +6,7 @@
 #    By: ebulwer <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/16 17:37:29 by ebulwer           #+#    #+#              #
-#    Updated: 2020/02/24 01:57:11 by ebulwer          ###   ########.fr        #
+#    Updated: 2020/03/02 17:08:38 by ebulwer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ ft_putstr_fd.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_st
 ft_strequ.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c \
 ft_strncat.c ft_strncmp.c ft_strncpy.c  ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c \
 ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstmap.c ft_lstiter.c \
-ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_strrev.c ft_nbrlen.c ft_isspace.c ft_swap.c ft_sqrt.c
+ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_strrev.c ft_nbrlen.c ft_isspace.c ft_swap.c ft_sqrt.c \
+get_next_line.c
 
 OFILES = $(SRCS:.c=.o)
 
