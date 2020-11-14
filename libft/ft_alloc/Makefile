@@ -1,0 +1,38 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ebulwer <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/13 21:53:50 by ebulwer           #+#    #+#              #
+#    Updated: 2020/11/13 21:53:53 by ebulwer          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+include ../includes/libft.mk
+
+SOURCES = ft_realloc.c ft_memalloc.c ft_memdel.c ft_strdel.c
+OBJECTS = ft_realloc.o ft_memalloc.o ft_memdel.o ft_strdel.o
+
+NAME = liballoc.a
+
+
+all: print $(SOURCES) $(NAME)
+	
+print:
+	@echo \*\*\* Compiling ft_alloc
+
+.c.o:
+	$(COMPILING) $< -o $@
+
+$(NAME): $(OBJECTS)
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
+	@mv $(NAME) ../lib/$(NAME)
+
+clean:
+	@rm -f $(OBJECTS)
+
+fclean: clean
+	@rm -f ../lib/$(NAME)
