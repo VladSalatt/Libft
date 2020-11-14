@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_buffaddsymb.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ebulwer <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/02 12:36:28 by ebulwer           #+#    #+#             */
+/*   Updated: 2020/01/17 01:32:37 by ebulwer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void					ft_buffaddsymb(t_buff *buff, char c)
+{
+	size_t				size_of_new_str;
+	size_t				remaining_size;
+
+	remaining_size = buff->totalsize - buff->size;
+	size_of_new_str = 1;
+	if (remaining_size <= size_of_new_str)
+	{
+		buff->totalsize += size_of_new_str + buff->additional_size;
+		if ((buff->line = ft_realloc(buff->line, buff->totalsize)) == NULL)
+			exit(1);
+	}
+	buff->line[buff->size] = c;
+	buff->size += size_of_new_str;
+}
